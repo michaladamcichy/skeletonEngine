@@ -1,4 +1,8 @@
-﻿#include<stdafx.h>
+﻿/*
+Copyright by Michał Cichy
+2018
+*/
+#include<stdafx.h>
 #include<config.h>
 
 int main(int argc, char* argv[])
