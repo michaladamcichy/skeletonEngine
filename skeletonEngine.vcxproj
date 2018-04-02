@@ -22,6 +22,7 @@
     <ClCompile Include="skeletonEngine.cpp" />
   </ItemGroup>
   <ItemGroup>
+    <ClInclude Include="camera.h" />
     <ClInclude Include="colors.h" />
     <ClInclude Include="drawing.h" />
     <ClInclude Include="config.h" />
@@ -37,6 +38,7 @@
     <ClInclude Include="utils.h" />
     <ClInclude Include="view.h" />
     <ClInclude Include="window.h" />
+    <ClInclude Include="world.h" />
   </ItemGroup>
   <ItemGroup>
     <None Include="cfg.cfg" />

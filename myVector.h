@@ -171,3 +171,12 @@ void MyVector::print()
 	}
 	printf(")");
 }
+
+void trans(MyPoint& point, MyVector vector)
+{
+	point = {
+		point.x + vector.x,
+		point.y + vector.y,
+		point.z + vector.z
+	};
+}

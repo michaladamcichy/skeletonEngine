@@ -35,6 +35,8 @@ Renderer::Renderer(Window& window, int flags = 0)
 			printf("\nCouldn't set blend mode: %s", SDL_GetError());
 		}
 	}
+	this->clear();
+	this->updateScreen();
 }
 
 bool Renderer::create(Window& window, int flags = 0)
