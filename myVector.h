@@ -1,10 +1,9 @@
-
 class MyVector
 {
 public:
 	double x;
 	double y;
-	double z=0;
+	double z = 0;
 	MyVector();
 	MyVector(double inX, double inY, double inZ);
 	MyVector(MyPoint A, MyPoint B);
@@ -18,10 +17,16 @@ public:
 	MyVector operator - (const MyVector& vector);
 	MyVector operator * (const double& multiplier);
 	MyVector operator / (const double& divider);
-	MyVector operator += (const MyVector& vector);
-	MyVector operator -= (const MyVector& vector);
-	MyVector operator *= (const double& multiplier);
-	MyVector operator /= (const double& divider);
+	MyVector& operator += (const MyVector& vector);
+	MyVector& operator -= (const MyVector& vector);
+	MyVector& operator *= (const double& multiplier);
+	MyVector& operator /= (const double& divider);
+	bool operator == (const MyVector& vector);
+	bool operator != (const MyVector& vector);
+	bool operator < (MyVector& vector);
+	bool operator > (MyVector& vector);
+	bool operator <= (MyVector& vector);
+	bool operator >= (MyVector& vector);
 	void print();
 };
 
@@ -90,26 +95,79 @@ MyVector MyVector::operator / (const double& divider)
 {
 	return { this->x / divider, this->y / divider, this->z /divider };
 }
-MyVector MyVector::operator += (const MyVector& vector)
+MyVector& MyVector::operator += (const MyVector& vector)
 {
-	return *this + vector;
+	*this = *this + vector;
+	return *this;
 }
-MyVector MyVector::operator -= (const MyVector& vector)
+MyVector& MyVector::operator -= (const MyVector& vector)
 {
-	return *this - vector;
+	*this = *this - vector;
+	return *this;
 }
-MyVector MyVector::operator *= (const double& multiplier)
+MyVector& MyVector::operator *= (const double& multiplier)
 {
-	return *this * multiplier;
+	*this = *this * multiplier;
+	return *this;
 }
-MyVector MyVector::operator /= (const double& divider)
+MyVector& MyVector::operator /= (const double& divider)
 {
-	return *this / divider;
+	*this = *this / divider;
+	return *this;
+}
+bool MyVector::operator == (const MyVector& vector)
+{
+	return this->x == vector.x && this->y == vector.y && this->z == vector.z;
+}
+bool MyVector::operator != (const MyVector& vector)
+{
+	return this->x != vector.x || this->y != vector.y || this->z != vector.z;
+}
+bool MyVector::operator < (MyVector& vector)
+{
+	return this->getLength() < vector.getLength();
+}
+bool MyVector::operator > (MyVector& vector)
+{
+	return this->getLength() > vector.getLength();
+}
+bool MyVector::operator <= (MyVector& vector)
+{
+	return this->getLength() <= vector.getLength();
+}
+bool MyVector::operator >= (MyVector& vector)
+{
+	return this->getLength() >= vector.getLength();
 }
 void MyVector::print()
 {
-	if (z == 0)
-		printf("(%lf,%lf)", x, y);
+	printf("(");
+	if (int(x) == x)
+	{
+		printf("%d,", int(x));
+	}
 	else
-		printf("(%lf,%lf,%lf)", x, y, z);
+	{
+		printf("%lf,", x);
+	}
+	if (int(y) == y)
+	{
+		printf("%d", int(y));
+	}
+	else
+	{
+		printf("%lf", y);
+	}
+	if (z != 0)
+	{
+		if (int(z) == z)
+		{
+			printf(",%d", int(z));
+		}
+		else
+		{
+			printf(",%lf", z);
+		}
+	}
+	printf(")");
 }

@@ -5,13 +5,9 @@ class Mouse
     MyVector transXY;
 
     public:
-    int REPEAT = 2;
+    
     bool left = false;
     bool right  = false;
-
-    bool leftReleased= true;
-    int leftRepeat=REPEAT;
-    int rightRepeat=REPEAT;
 
     Mouse()
     {
@@ -68,7 +64,6 @@ class Mouse
     }
 
 };
-
 
 class Keyboard
 {

@@ -7,12 +7,8 @@ Copyright by Michał Cichy
 
 int main(int argc, char* argv[])
 {
-	MyPoint A(5, 6);
-	MyPoint B(1, 2);
-	A.print();
-	B.print();
-	printf("\n");
-
+	MyVector AB(2, 4), CD(-5, -10);
+	if (AB <= CD) std::cout << "####";
 	Config cfg;
 	init_SDL();
 	Window window(
