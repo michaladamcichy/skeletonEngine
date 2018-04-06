@@ -21,9 +21,28 @@ int main(int argc, char* argv[])
 	Camera camera(
 		cfg.getScreenWidth(),
 		cfg.getScreenHeight(),
-		cfg.getCameraLengthMultiplier*cfg.getScreenWidth()
+		cfg.getCameraLength()
 	);
-	SDL_Delay(1000);
+	////
+	SDL_Event event;
+	bool exit = false;
+	while (!exit)
+	{
+		while (SDL_PollEvent(&event) != 0)
+		{
+			if (event.type == SDL_QUIT)
+			{
+				exit = true;
+			}
+			else
+			{
+				///
+			}
+		}
+		renderer.clear();
+		renderer.updateScreen();
+	}
+	////
 	quit_SDL();
 	return 0;
 }		

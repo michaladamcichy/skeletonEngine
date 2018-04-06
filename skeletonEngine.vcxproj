@@ -26,8 +26,10 @@
     <ClInclude Include="colors.h" />
     <ClInclude Include="drawing.h" />
     <ClInclude Include="config.h" />
+    <ClInclude Include="edge.h" />
     <ClInclude Include="input.h" />
     <ClInclude Include="myGeometry.h" />
+    <ClInclude Include="myLine.h" />
     <ClInclude Include="myMath.h" />
     <ClInclude Include="myPoint.h" />
     <ClInclude Include="myVector.h" />

@@ -71,6 +71,12 @@
     <ClInclude Include="world.h">
       <Filter>Header Files</Filter>
     </ClInclude>
+    <ClInclude Include="edge.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="myLine.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <None Include="cfg.cfg">

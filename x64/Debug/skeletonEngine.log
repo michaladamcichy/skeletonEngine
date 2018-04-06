@@ -1,13 +1,10 @@
 ﻿  skeletonEngine.cpp
 d:\dropbox\programowanie\skeletonengine\skeletonengine\utils.h(16): warning C4267: 'initializing': conversion from 'size_t' to 'int', possible loss of data
 d:\dropbox\programowanie\skeletonengine\skeletonengine\sdlutils.h(252): warning C4267: 'initializing': conversion from 'size_t' to 'int', possible loss of data
-d:\dropbox\programowanie\skeletonengine\skeletonengine\world.h(82): warning C4267: 'return': conversion from 'size_t' to 'int', possible loss of data
-d:\dropbox\programowanie\skeletonengine\skeletonengine\world.h(99): warning C4477: 'printf' : format string '%d' requires an argument of type 'int', but variadic argument 1 has type 'unsigned __int64'
-  d:\dropbox\programowanie\skeletonengine\skeletonengine\world.h(99): note: consider using '%zd' in the format string
+d:\dropbox\programowanie\skeletonengine\skeletonengine\world.h(50): warning C4267: 'return': conversion from 'size_t' to 'int', possible loss of data
+d:\dropbox\programowanie\skeletonengine\skeletonengine\world.h(67): warning C4477: 'printf' : format string '%d' requires an argument of type 'int', but variadic argument 1 has type 'unsigned __int64'
+  d:\dropbox\programowanie\skeletonengine\skeletonengine\world.h(67): note: consider using '%zd' in the format string
 d:\dropbox\programowanie\skeletonengine\skeletonengine\camera.h(21): warning C4244: '=': conversion from 'double' to 'int', possible loss of data
 d:\dropbox\programowanie\skeletonengine\skeletonengine\camera.h(22): warning C4244: '=': conversion from 'double' to 'int', possible loss of data
 d:\dropbox\programowanie\skeletonengine\skeletonengine\camera.h(23): warning C4244: '=': conversion from 'double' to 'int', possible loss of data
-d:\dropbox\programowanie\skeletonengine\skeletonengine\skeletonengine.cpp(20): warning C4930: 'Camera camera(void)': prototyped function not called (was a variable definition intended?)
-cl : Command line warning D9028: minimal rebuild failure, reverting to normal build
-     Creating library D:\Dropbox\PROGRAMOWANIE\skeletonEngine\skeletonEngine\x64\Debug\raycast.lib and object D:\Dropbox\PROGRAMOWANIE\skeletonEngine\skeletonEngine\x64\Debug\raycast.exp
   skeletonEngine.vcxproj -> D:\Dropbox\PROGRAMOWANIE\skeletonEngine\skeletonEngine\x64\Debug\raycast.exe
