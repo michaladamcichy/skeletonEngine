@@ -23,6 +23,21 @@ int main(int argc, char* argv[])
 		cfg.getScreenHeight(),
 		cfg.getCameraLength()
 	);
+	////Tests
+	MyPoint A(-8,3,5);
+	MyPoint B(2,-1,10);
+	MyPoint C(-2,6,15);
+	MyPlain plain(A, B, C);
+	plain.printInfo();
+	MyPoint E(3,1,7);
+	MyPoint F(-1, 0, 5);
+	MyLine line(E,F);
+	printf("\n##");
+	MyPoint inter;
+	if (plain.crossedByLine(line, inter))
+	{
+		inter.print();
+	}
 	////
 	SDL_Event event;
 	bool exit = false;

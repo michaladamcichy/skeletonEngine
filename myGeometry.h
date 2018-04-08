@@ -2,6 +2,7 @@
 #include<myPoint.h>
 #include<myVector.h>
 #include<myLine.h>
+#include<myPlain.h>
 
 double pointPointDistance(MyPoint A, MyPoint B)
 {
