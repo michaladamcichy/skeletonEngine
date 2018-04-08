@@ -10,6 +10,7 @@ public:
 	int addEdge(Edge edge);
 	Edge& getEdge(int index);
 	bool removeEdge(int index);
+	int getEdgesCount();
 	void printInfo();
 	~World();
 };
@@ -19,10 +20,12 @@ World::World()
 }
 World::World(const char* fileName)
 {
+
 	std::ifstream input;
 	input.open(fileName);
 	if (input.good() && !isFileEmpty(fileName))
 	{
+		edges.reserve( linesCount(fileName) );
 		double x, y, z;
 		MyPoint A, B;
 		Edge edge;
@@ -70,6 +73,10 @@ void World::printInfo()
 		printf("\n");
 		edges[i].printInfo();
 	}
+}
+int World::getEdgesCount()
+{
+	return edges.size();
 }
 World::~World()
 {

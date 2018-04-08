@@ -31,10 +31,11 @@
     <ClInclude Include="myGeometry.h" />
     <ClInclude Include="myLine.h" />
     <ClInclude Include="myMath.h" />
-    <ClInclude Include="myPlain.h" />
+    <ClInclude Include="myPlane.h" />
     <ClInclude Include="myPoint.h" />
     <ClInclude Include="myVector.h" />
     <ClInclude Include="renderer.h" />
+    <ClInclude Include="screen.h" />
     <ClInclude Include="sdlUtils.h" />
     <ClInclude Include="sound.h" />
     <ClInclude Include="stdafx.h" />

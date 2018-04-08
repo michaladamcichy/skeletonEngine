@@ -2,7 +2,35 @@ bool isFileEmpty(std::string path)
 {
     std::ifstream in;
     in.open(path.c_str(), std::ios::ate | std::ios::binary);
-    return !in.tellg();
+	if (in.good())
+	{
+		return !in.tellg();
+	}
+	else
+	{
+		printf("\nCannot open file %s", path.c_str());
+		return true;
+	}
+}
+int linesCount(std::string path)
+{
+	if (isFileEmpty(path))
+	{
+		return 0;
+	}
+	else
+	{
+		std::ifstream in;
+		std::string row;
+		int rowsCount = 0;
+		in.open(path.c_str());
+		while (!in.eof())
+		{
+			std::getline(in, row);
+			rowsCount++;
+		}
+		return rowsCount;
+	}
 }
 std::string lastWordFromPath(std::string path)
 {

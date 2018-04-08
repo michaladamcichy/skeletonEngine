@@ -6,6 +6,7 @@ Copyright by Michał Cichy
 #include<config.h>
 #include<world.h>
 #include<camera.h>
+#include<screen.h>
 
 int main(int argc, char* argv[])
 {
@@ -23,21 +24,25 @@ int main(int argc, char* argv[])
 		cfg.getScreenHeight(),
 		cfg.getCameraLength()
 	);
+	Screen screen(cfg.getScreenWidth(), cfg.getScreenHeight());
 	////Tests
-	MyPoint A(-8,3,5);
-	MyPoint B(2,-1,10);
-	MyPoint C(-2,6,15);
-	MyPlain plain(A, B, C);
-	plain.printInfo();
-	MyPoint E(3,1,7);
-	MyPoint F(-1, 0, 5);
-	MyLine line(E,F);
-	printf("\n##");
-	MyPoint inter;
-	if (plain.crossedByLine(line, inter))
+	//MyPlane plain({ 1,2,3 }, { 2,3,4 }, { 4,5,6 });
+	//X.print();
+	/*double A[4][4] = 
 	{
-		inter.print();
+		4,3,2,99 , 99,6,7,100 , 12,99,10,100,100,99,99,99
+	};*/
+	double a[4] = { 1,1,1,2 };
+	double b[4] = { 1,-1,-1,1 };
+	double c[4] = { 1,1,-1,1 };
+	double d[4] = { 1, 1,1,-1 };
+	double e[4] = { 2,-2,-2,5 };
+	double x, y, z, w;
+	if ( cramer4(a,b,c,d,e,x,y,z, w) )
+	{
+		printf("\n####%lf %lf %lf %lf\n", x, y, z,w);
 	}
+	//std::cout << "%%%%%%" << determinant(A);
 	////
 	SDL_Event event;
 	bool exit = false;
@@ -55,7 +60,10 @@ int main(int argc, char* argv[])
 			}
 		}
 		renderer.clear();
+		screen.castEdges(world, camera);
+		//screen.drawCastedEdges(renderer);
 		renderer.updateScreen();
+		exit = true;
 	}
 	////
 	quit_SDL();

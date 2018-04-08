@@ -6,15 +6,9 @@ public:
 	Renderer();
 	Renderer(Window& window, int flags);
 	bool create(Window& window, int flags);
-	void clear(Color color = { 0,0,0,0 })
-	{
-		SDL_SetRenderDrawColor(renderer, color.R, color.G, color.B, SDL_ALPHA_OPAQUE);
-		SDL_RenderClear(renderer);
-	}
-	void updateScreen()
-	{
-		SDL_RenderPresent(renderer);
-	}
+	void setDrawingcolor(Color color = { 0,0,0,0 });
+	void clear(Color color = { 0,0,0,0 });
+	void updateScreen();
 	SDL_Renderer* getPointer();
 	~Renderer();
 };
@@ -61,6 +55,19 @@ bool Renderer::create(Window& window, int flags = 0)
 SDL_Renderer* Renderer::getPointer()
 {
 	return renderer;
+}
+void Renderer::setDrawingcolor(Color color)
+{
+	SDL_SetRenderDrawColor(renderer, color.R, color.G, color.B, color.A);
+}
+void Renderer::clear(Color color)
+{
+	SDL_SetRenderDrawColor(renderer, color.R, color.G, color.B, color.A);
+	SDL_RenderClear(renderer);
+}
+void Renderer::updateScreen()
+{
+	SDL_RenderPresent(renderer);
 }
 
 Renderer::~Renderer()

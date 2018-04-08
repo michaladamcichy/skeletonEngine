@@ -18,7 +18,7 @@
 //My libraries
 #include<myGeometry.h>
 #include<input.h>
-#include<drawing.h>
 #include<sound.h>
 #include<utils.h>
 #include<sdlUtils.h>
+#include<drawing.h>

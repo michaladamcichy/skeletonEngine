@@ -6,6 +6,7 @@ private:
 public:
 	MyLine();
 	MyLine(MyPoint A, MyPoint B);
+	void define(MyPoint A, MyPoint B);
 	bool containsPoint(MyPoint point);
 	double getA();
 	double getB();
@@ -64,4 +65,21 @@ double MyLine::getC()
 double MyLine::getD()
 {
 	return D;
+}
+void MyLine::define(MyPoint P1, MyPoint P2)
+{
+	/*
+	printf("\nCreating a line from points");
+	P1.print();
+	printf(" and ");
+	P2.print();
+	*/
+	if (
+		!cramer(P1.x, 1, P1.y, P2.x, 1, P2.y, A, B) ||
+		!cramer(P1.x, 1, P1.z, P2.x, 1, P2.z, C, D)
+		)
+	{
+		printf("\n Unable to calculate the line.");
+		A = 0, B = 0, C = 0, D = 0;
+	}
 }

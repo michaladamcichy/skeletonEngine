@@ -77,7 +77,10 @@
     <ClInclude Include="myLine.h">
       <Filter>Header Files</Filter>
     </ClInclude>
-    <ClInclude Include="myPlain.h">
+    <ClInclude Include="screen.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="myPlane.h">
       <Filter>Header Files</Filter>
     </ClInclude>
   </ItemGroup>

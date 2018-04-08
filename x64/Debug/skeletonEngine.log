@@ -1,11 +1,14 @@
 ﻿  skeletonEngine.cpp
-d:\dropbox\programowanie\skeletonengine\skeletonengine\utils.h(16): warning C4267: 'initializing': conversion from 'size_t' to 'int', possible loss of data
+d:\dropbox\programowanie\skeletonengine\skeletonengine\myplane.h(27): warning C4129: 'F': unrecognized character escape sequence
+d:\dropbox\programowanie\skeletonengine\skeletonengine\myplane.h(38): warning C4129: 'F': unrecognized character escape sequence
+d:\dropbox\programowanie\skeletonengine\skeletonengine\utils.h(44): warning C4267: 'initializing': conversion from 'size_t' to 'int', possible loss of data
 d:\dropbox\programowanie\skeletonengine\skeletonengine\sdlutils.h(252): warning C4267: 'initializing': conversion from 'size_t' to 'int', possible loss of data
-d:\dropbox\programowanie\skeletonengine\skeletonengine\world.h(50): warning C4267: 'return': conversion from 'size_t' to 'int', possible loss of data
-d:\dropbox\programowanie\skeletonengine\skeletonengine\world.h(67): warning C4477: 'printf' : format string '%d' requires an argument of type 'int', but variadic argument 1 has type 'unsigned __int64'
-  d:\dropbox\programowanie\skeletonengine\skeletonengine\world.h(67): note: consider using '%zd' in the format string
-d:\dropbox\programowanie\skeletonengine\skeletonengine\camera.h(21): warning C4244: '=': conversion from 'double' to 'int', possible loss of data
-d:\dropbox\programowanie\skeletonengine\skeletonengine\camera.h(22): warning C4244: '=': conversion from 'double' to 'int', possible loss of data
-d:\dropbox\programowanie\skeletonengine\skeletonengine\camera.h(23): warning C4244: '=': conversion from 'double' to 'int', possible loss of data
-     Creating library D:\Dropbox\PROGRAMOWANIE\skeletonEngine\skeletonEngine\x64\Debug\raycast.lib and object D:\Dropbox\PROGRAMOWANIE\skeletonEngine\skeletonEngine\x64\Debug\raycast.exp
+d:\dropbox\programowanie\skeletonengine\skeletonengine\drawing.h(6): warning C4244: 'argument': conversion from 'double' to 'int', possible loss of data
+d:\dropbox\programowanie\skeletonengine\skeletonengine\world.h(53): warning C4267: 'return': conversion from 'size_t' to 'int', possible loss of data
+d:\dropbox\programowanie\skeletonengine\skeletonengine\world.h(70): warning C4477: 'printf' : format string '%d' requires an argument of type 'int', but variadic argument 1 has type 'unsigned __int64'
+  d:\dropbox\programowanie\skeletonengine\skeletonengine\world.h(70): note: consider using '%zd' in the format string
+d:\dropbox\programowanie\skeletonengine\skeletonengine\world.h(79): warning C4267: 'return': conversion from 'size_t' to 'int', possible loss of data
+d:\dropbox\programowanie\skeletonengine\skeletonengine\camera.h(28): warning C4244: '=': conversion from 'double' to 'int', possible loss of data
+d:\dropbox\programowanie\skeletonengine\skeletonengine\camera.h(29): warning C4244: '=': conversion from 'double' to 'int', possible loss of data
+d:\dropbox\programowanie\skeletonengine\skeletonengine\camera.h(30): warning C4244: '=': conversion from 'double' to 'int', possible loss of data
   skeletonEngine.vcxproj -> D:\Dropbox\PROGRAMOWANIE\skeletonEngine\skeletonEngine\x64\Debug\raycast.exe
